@@ -1,0 +1,92 @@
+@import "/src/components/scss/mixin";
+.network {
+  margin-top: 140px;
+  background-image: url("../../assets/network-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  @include respond-to(1400px) {
+    margin-top: 80px;
+    background-size: auto;
+    background-position: center;
+  }
+  @include respond-to($x-small) {
+    margin-top: 80px;
+    background-size: cover;
+    background-position: 25%;
+  }
+  &__content {
+    padding-top: 80px;
+
+    & .title-desc, .title {
+      color: #FFFFFF;
+    }
+
+    & .title {
+      max-width: 500px;
+    }
+
+    & .title-desc__desc {
+      color: #FFFFFF;
+      max-width: 556px;
+      width: 100%;
+      opacity: 0.7;
+    }
+  }
+
+  &__numbers {
+    display: flex;
+    margin: 45px 0;
+  }
+
+  &__number {
+    font-family: 'Rubik', sans-serif;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    @include respond-to($x-small) {
+      font-size: 35px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+
+    &-small {
+      font-family: 'Hind', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 150%;
+      opacity: 0.7;
+      @include respond-to($x-small) {
+        font-size: 14px;
+      }
+    }
+
+    & span {
+      color: #ea1515;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    margin-left: 50px;
+    @include respond-to($x-small) {
+      margin: 0;
+    }
+  }
+  &__logo {
+    width: 125px;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+    &:nth-child(2) {
+      width: 180px;
+    }
+
+    &:nth-child(3) {
+      width: 146px;
+    }
+  }
+}

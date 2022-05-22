@@ -1,0 +1,31 @@
+@import "/src/components/scss/mixin";
+.team {
+  margin-top: 200px;
+  @include respond-to($x-medium) {
+    margin-top: 100px;
+  }
+  @include respond-to($x-small) {
+    margin-top: 100px;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 83px;
+    & .title-desc {
+      max-width: 770px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    & .title-desc__desc {
+      opacity: 0.7;
+    }
+    &__slider {
+      & .slick-slide .slick-active .slick-current {
+        width: 100%;
+      }
+    }
+  }
+}

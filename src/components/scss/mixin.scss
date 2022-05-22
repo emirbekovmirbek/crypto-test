@@ -1,0 +1,16 @@
+
+$large: 1440px;
+$x-medium: 1280px;
+
+$medium: 1024px;
+$tablet:  768px;
+
+
+$small: 600px;
+$x-small: 480px;
+
+@mixin respond-to($media) {
+  @media only screen and (max-width: $media) {
+    @content;
+  }
+}

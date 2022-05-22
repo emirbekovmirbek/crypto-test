@@ -1,0 +1,39 @@
+@import "/src/components/scss/mixin";
+.charts {
+  margin-top: 240px;
+  @include respond-to($x-medium) {
+    margin-top: 100px;
+  }
+  @include respond-to($x-small) {
+    margin-top: 70px;
+  }
+  &__graphs {
+    display: flex;
+    grid-gap: 20px;
+    @include respond-to($x-medium) {
+      flex-direction: column;
+      grid-gap: 40px;
+    }
+  }
+  &__graph {
+    &-texts {
+      display: flex;
+      align-items: center;
+      & p {
+        color: #4F4F4F;
+        margin-right: 50px;
+      }
+      & span {
+        color: #CF1257;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 120%;
+        font-family: 'Rubik', sans-serif;
+      }
+    }
+    &-image {
+      max-width: 550px;
+      width: 100%;
+    }
+  }
+}

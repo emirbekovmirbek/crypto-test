@@ -1,0 +1,70 @@
+@import "/src/components/scss/mixin";
+
+.miner {
+  margin-top: 100px;
+  background-image: url("../../assets/miner-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  @include respond-to($x-medium) {
+    background-size: auto;
+    background-position: center;
+  }
+  @include respond-to($x-small) {
+    background-image: url("../../assets/miner-mobile-bg.png");
+    background-size: 100% 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    max-width: 750px;
+    width: 100%;
+
+    & .title-desc__text, .title, .title-desc__desc {
+      color: #FFFFFF;
+    }
+
+    & .title-desc__desc {
+      opacity: 0.7;
+    }
+
+    & .title {
+      max-width: 570px;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    @include respond-to($medium) {
+      grid-gap: 20px;
+      flex-direction: column;
+    }
+  }
+
+  &__texts {
+    color: #FFFFFF;
+    display: flex;
+    margin-top: 26px;
+
+    & div:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
+
+  &__numb {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    font-family: 'Rubik', sans-serif;
+    @include respond-to($small) {
+      font-size: 25px;
+    }
+  }
+}

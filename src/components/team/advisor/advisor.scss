@@ -1,0 +1,15 @@
+.advisor {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+
+  &__name, &__position {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  &__position {
+    font-weight: 300;
+    color: #4F4F4F;
+  }
+}

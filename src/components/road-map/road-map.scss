@@ -1,0 +1,71 @@
+@import "/src/components/scss/mixin";
+
+.road-map {
+  margin-top: 140px;
+  @include respond-to($small) {
+    margin-top: 60px;
+  }
+
+  &__top {
+    max-width: 770px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    & .title-desc__top {
+      justify-content: center;
+    }
+  }
+
+  &__date {
+    @include respond-to(1200px) {
+      display: none;
+    }
+    margin-top: 136px;
+
+    &-top {
+      display: flex;
+      grid-gap: 14%;
+      align-items: flex-end;
+    }
+
+    &-image {
+      margin: 28px 0;
+    }
+
+    &-bottom {
+      display: flex;
+      grid-gap: 18%;
+      align-items: flex-start;
+      margin-left: 190px;
+
+      & .date {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    &--mobile {
+      @include respond-to(1200px) {
+        display: flex;
+      }
+      display: none;
+      margin-top: 44px;
+      & .road-map__dates {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 64px;
+      }
+      & .date {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      & .road-map__date {
+        &-image {
+          margin: 0 30px;
+          width: 22px;
+        }
+      }
+    }
+  }
+}

@@ -1,14 +1,19 @@
 import React from 'react'
-import './employment.scss'
+import './advisor.scss'
 
-const Employment = ({employment}) => {
+const Advisor = ({advisor}) => {
   return (
-    <div className="employment">
-      <div className="employment__avatar">
-        <img src={employment.avatar} alt={employment.name}/>
+    <div className="advisor">
+      <div className="advisor__content">
+        <div className="advisor__avatar">
+          <img src={advisor.avatar} alt={advisor.name}/>
+        </div>
+        <p className="advisor__name">{advisor.name}</p>
+        <p className="advisor__position"> {advisor.position}</p>
       </div>
+
     </div>
   )
 }
 
-export default Employment
+export default Advisor

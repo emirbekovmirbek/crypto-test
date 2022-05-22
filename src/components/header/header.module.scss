@@ -1,0 +1,92 @@
+@import "/src/components/scss/mixin";
+.header {
+  background-image: url("../../assets/header-bd.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @include respond-to($x-small) {
+    background-image: url("../../assets/header-mobile-bg.png");
+    height: auto;
+    padding-bottom: 500px;
+  }
+  &__logo {
+    width: 100px;
+  }
+  &:last-child {
+    justify-self: center;
+  }
+  &__menu {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include respond-to($tablet) {
+      display: none;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    color: #FFFFFF;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    margin-top: auto;
+    margin-bottom: auto;
+    @include respond-to($medium) {
+      margin: 30px auto 0;
+    }
+  }
+
+  &__title {
+    color: #FFFFFF;
+    font-size: 75px;
+    line-height: 120%;
+    @include respond-to($tablet) {
+      font-size: 35px;
+    }
+  }
+
+  &__text {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    max-width: 355px;
+    width: 100%;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #FFFFFF;
+  }
+  &__actions {
+    display: flex;
+    grid-gap: 20px;
+  }
+  &__burger {
+    @include respond-to($tablet) {
+      display: block;
+    }
+    display: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+

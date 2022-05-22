@@ -1,0 +1,32 @@
+.event-card {
+  background: #FFFFFF;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+  padding: 20px 18px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 265px;
+  width: 100%;
+  text-align: center;
+  &__num {
+    color: #CF1257;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 10px;
+    &--sm {
+      font-size: 18px;
+    }
+  }
+  &__name {
+    text-transform: uppercase;
+    margin-top: 47px;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  &__desc {
+    margin-bottom: 50px;
+    color: #4F4F4F;
+  }
+}

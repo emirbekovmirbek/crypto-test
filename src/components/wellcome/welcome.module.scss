@@ -1,7 +1,39 @@
-.wellcome {
-  padding:  0 40px;
+@import "/src/components/scss/mixin";
+
+.welcome {
+  display: flex;
+  align-items: center;
+  @include respond-to($tablet) {
+    flex-direction: column;
+  }
+
   &__image {
     max-width: 505px;
     width: 100%;
+    @include respond-to($tablet) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__right {
+    max-width: 570px;
+    width: 100%;
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+
+  &--reverse {
+    @include respond-to($tablet) {
+      flex-direction: column-reverse;
+    }
+
+    & .welcome__image {
+      @include respond-to($tablet) {
+        margin-bottom: 0;
+        margin-top: 50px;
+      }
+    }
   }
 }

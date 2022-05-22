@@ -1,0 +1,23 @@
+@import "/src/components/scss/mixin";
+
+.events {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  @include respond-to($x-small) {
+    align-items: start;
+  }
+
+
+  & .title-desc__top {
+    justify-content: center;
+  }
+
+  &__cards {
+    display: flex;
+    grid-gap: 50px;
+    margin-top: 40px;
+  }
+}

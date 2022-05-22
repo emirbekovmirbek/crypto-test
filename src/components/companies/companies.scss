@@ -1,0 +1,12 @@
+@import "/src/components/scss/mixin";
+.companies {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  @include respond-to($medium) {
+    margin-top: 54px;
+    grid-gap: 40px 70px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
