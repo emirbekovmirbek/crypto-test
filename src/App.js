@@ -11,6 +11,7 @@ import Miner from './components/miner/Miner';
 import Events from './components/events/Events';
 import Donate from './components/donate/Donate';
 import Footer from './components/footer/Footer';
+import Mask from './assets/Mask.png'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         imageName="People welcome"
       />
       <Benefit/>
-      <Welcome image="/assets/mask.png" classes="reverse"/>
+      <Welcome image={Mask} classes="reverse"/>
       <RoadMap/>
       <Companies/>
       <Network/>
